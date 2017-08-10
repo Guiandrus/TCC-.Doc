@@ -19,6 +19,11 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
+            <ImageView fx:id="imageVoltar" fitHeight="49.0" fitWidth="48.0" layoutX="40.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagens/left-arrow.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
       <Label layoutX="190.0" layoutY="22.0" prefHeight="31.0" prefWidth="238.0" text="Meu Perfil" textFill="#002363">

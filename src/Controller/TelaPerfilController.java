@@ -22,6 +22,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -68,6 +69,9 @@ public class TelaPerfilController implements Initializable {
 
     @FXML
     private JFXTextField tfNome;
+    
+    @FXML
+    private ImageView imageVoltar;
     
     Conta conta = new Conta();
     
@@ -120,6 +124,27 @@ public class TelaPerfilController implements Initializable {
             atualizaDados();
         });
         
+         imageVoltar.setOnMouseClicked(event -> {
+            Stage stage = (Stage) imageVoltar.getScene().getWindow();
+            stage.close();
+            TCC tcc = new TCC();
+            tcc.abreTela("HomeUsuario");
+        });
+        
+    }
+    
+    public void animaçãodosbotão(){
+        
+        imageVoltar.setOnMouseEntered(event ->{
+        imageVoltar.setScaleX(1.1);
+        imageVoltar.setScaleY(1.1);     
+        });
+        
+        imageVoltar.setOnMouseExited(event -> {
+        imageVoltar.setScaleX(1);
+        imageVoltar.setScaleY(1);
+        
+        });
     }
     
     public void atualizaDados(){           
@@ -139,6 +164,7 @@ public class TelaPerfilController implements Initializable {
         conta = TCC.getLogada();
         
         acaoDosBotoes();
+        animaçãodosbotão();
         
     }    
     

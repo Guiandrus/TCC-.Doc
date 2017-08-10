@@ -53,6 +53,8 @@ public class HomeUsuarioController implements Initializable {
         
             TCC tcc = new TCC();
             tcc.abreTela("TelaPerfil");
+            Stage stage = (Stage) btnPerfil.getScene().getWindow();
+            stage.close();
             
         });
          
