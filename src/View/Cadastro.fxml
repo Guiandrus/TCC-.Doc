@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="402.0" prefWidth="674.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CadastroController">
+   <children>
+      <ImageView fx:id="imagemRosto" fitHeight="150.0" fitWidth="200.0" layoutX="147.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../TCC%20com%20design/unnamed.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnEscolheImagem" layoutX="159.0" layoutY="235.0" mnemonicParsing="false" style="-fx-border-color: #002363; -fx-background-color: #eae9e9;" text="Escolher imagem" />
+      <TextField fx:id="tfNome" layoutX="299.0" layoutY="108.0" promptText="Ex: Lucas" style="-fx-border-color: #002363;" />
+      <TextField fx:id="tfLogin" layoutX="300.0" layoutY="171.0" promptText="Ex: Lucao" style="-fx-border-color: #002363;" />
+      <TextField fx:id="tfEmail" layoutX="501.0" layoutY="109.0" promptText="Ex: ex@exemplo.com" style="-fx-border-color: #002363;" />
+      <TextField fx:id="tfSenha" layoutX="501.0" layoutY="171.0" promptText="Ex: lucao123" style="-fx-border-color: #002363;" />
+      <Button fx:id="btnCadastrar" layoutX="425.0" layoutY="357.0" mnemonicParsing="false" style="-fx-background-color: #eae9e9; -fx-border-color: #002363;" text="Cadastrar" />
+      <Label layoutX="149.0" layoutY="28.0" text="Preencha os campos" textFill="#002363">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <TextField fx:id="tfResposta" layoutX="382.0" layoutY="278.0" prefHeight="22.0" prefWidth="150.0" promptText="Resposta" style="-fx-border-color: #002363;" />
+      <Pane prefHeight="402.0" prefWidth="122.0" style="-fx-background-color: #002363;">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <children>
+            <JFXButton fx:id="btnVoltar" layoutX="35.0" layoutY="177.0" opacity="0.0" prefHeight="48.0" prefWidth="52.0" style="back: transparent;" text=" " />
+            <ImageView fx:id="imageVoltar" fitHeight="49.0" fitWidth="48.0" layoutX="37.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagens/left-arrow.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <ComboBox fx:id="cbPergunta" layoutX="383.0" layoutY="234.0" prefWidth="150.0" style="-fx-background-color: white; -fx-border-color: #002363;" />
+      <Separator layoutX="147.0" layoutY="64.0" prefHeight="2.0" prefWidth="324.0" />
+      <Label layoutX="300.0" layoutY="94.0" text="Nome" textFill="#002363" />
+      <Label layoutX="300.0" layoutY="157.0" text="Login" textFill="#002363" />
+      <Label layoutX="501.0" layoutY="94.0" text="Email" textFill="#002363" />
+      <Label layoutX="501.0" layoutY="157.0" text="Senha" textFill="#002363" />
+      <Label layoutX="383.0" layoutY="217.0" text="Pergunta de recuperação" textFill="#002363" />
+      <Label layoutX="383.0" layoutY="264.0" text="Resposta" textFill="#002363" />
+      <ImageView fx:id="imageX" fitHeight="38.0" fitWidth="27.0" layoutX="624.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../cancel-button1.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnSair" layoutX="625.0" layoutY="13.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="27.0" style="-fx-background-color: transparent;" />
+   </children>
+</AnchorPane>

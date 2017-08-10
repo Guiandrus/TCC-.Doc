@@ -1,0 +1,14 @@
+create table conta(
+
+nome varchar,
+tipoConta varchar,
+email varchar,
+login varchar,
+senha varchar,
+chave varchar,
+pergunta varchar,
+resposta varchar,
+imagem varchar,
+primary key(login)
+
+);

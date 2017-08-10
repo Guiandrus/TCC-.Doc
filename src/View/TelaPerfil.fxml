@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.validation.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="371.0" prefWidth="612.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TelaPerfilController">
+   <children>
+      <Pane layoutX="-3.0" prefHeight="400.0" prefWidth="129.0" style="-fx-background-color: #002363;">
+         <children>
+            <Label layoutX="49.0" layoutY="27.0" text="Perfil" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="190.0" layoutY="22.0" prefHeight="31.0" prefWidth="238.0" text="Meu Perfil" textFill="#002363">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Pane layoutX="159.0" layoutY="75.0" prefHeight="123.0" prefWidth="421.0" style="-fx-background-color: white; -fx-border-color: lightgray;">
+         <children>
+            <JFXButton fx:id="btnEditar" layoutX="345.0" layoutY="89.0" prefHeight="27.0" prefWidth="52.0" ripplerFill="#0b4b80" style="-fx-background-color: white; -fx-border-color: #002363;" text="Editar" />
+            <ImageView fx:id="profilePicture" fitHeight="121.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagens/profile-pictures.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="138.0" layoutY="14.0" text="Nome : " textFill="#002363">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelNome" layoutX="138.0" layoutY="31.0" prefHeight="17.0" prefWidth="91.0" text="Teste">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="138.0" layoutY="65.0" text="Email :" textFill="#002363">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelEmail" layoutX="138.0" layoutY="82.0" text="Teste">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Pane fx:id="paneAlteracao" prefHeight="279.0" prefWidth="421.0" style="-fx-background-color: white; -fx-border-color: lightgray;" visible="false">
+               <children>
+                  <Label layoutX="139.0" layoutY="14.0" text="Nome : " textFill="#002363" />
+                  <Label layoutX="139.0" layoutY="70.0" text="Email :" textFill="#002363" />
+                  <Button fx:id="btnAlterarImagem" layoutX="14.0" layoutY="131.0" mnemonicParsing="false" style="-fx-background-color: #eae9e9; -fx-border-color: #002363;" text="Alterar Imagem" />
+                  <Label layoutX="137.0" layoutY="123.0" text="Senha :" textFill="#002363" />
+                  <Label layoutX="139.0" layoutY="173.0" text="Nova senha :" textFill="#002363" />
+                  <Button fx:id="btnConfirmar" layoutX="303.0" layoutY="245.0" mnemonicParsing="false" style="-fx-background-color: #eae9e9; -fx-border-color: #002363;" text="Confirmar" />
+                  <Button fx:id="btnCancelar" layoutX="200.0" layoutY="245.0" mnemonicParsing="false" style="-fx-background-color: #eae9e9; -fx-border-color: #002363;" text="Cancelar" />
+                  <JFXTextField fx:id="tfNome" layoutX="140.0" layoutY="31.0" unFocusColor="#002363" />
+                  <JFXTextField fx:id="tfEmail" layoutX="140.0" layoutY="87.0" unFocusColor="#002363" />
+                  <JFXTextField fx:id="tfSenha" layoutX="140.0" layoutY="140.0" unFocusColor="#002363" />
+                  <JFXTextField fx:id="tfNovaSenha" layoutX="143.0" layoutY="190.0" unFocusColor="#002363" />
+               </children>
+            </Pane>
+            <ImageView fx:id="fotoPerfil" fitHeight="121.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagens/profile-pictures.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

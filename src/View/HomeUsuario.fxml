@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomeUsuarioController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="171.0" style="-fx-background-color: #002363;">
+         <children>
+            <Label layoutX="47.0" layoutY="28.0" prefHeight="29.0" prefWidth="78.0" text=".DOC" textFill="WHITE">
+               <font>
+                  <Font name="Felix Titling" size="21.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnHome" alignment="BOTTOM_LEFT" layoutY="130.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="171.0" style="-fx-background-color: #002363;" text="          Home" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <ImageView fitHeight="17.0" fitWidth="24.0" layoutX="14.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagens/home.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnDocumentos" layoutY="172.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="171.0" style="-fx-background-color: #002363;" text="       Documentos" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnContas" alignment="BASELINE_LEFT" layoutY="214.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="171.0" style="-fx-background-color: #002363;" text="          Contas" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnIngressos" alignment="TOP_LEFT" layoutY="256.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="171.0" style="-fx-background-color: #002363;" text="          Ingressos" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAleatorio" layoutY="298.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="171.0" style="-fx-background-color: #002363;" text="     Pagamentos" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="17.0" fitWidth="24.0" layoutX="14.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagens/moneyeditado.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="17.0" fitWidth="24.0" layoutX="14.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagens/folder.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="17.0" fitWidth="24.0" layoutX="14.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagens/ticket.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="17.0" fitWidth="24.0" layoutX="14.0" layoutY="311.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagens/dollar-symbol.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="171.0" prefHeight="35.0" prefWidth="431.0" style="-fx-background-color: #002363;">
+         <children>
+            <Button fx:id="btnLogout" layoutX="376.0" layoutY="3.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="41.0" style="-fx-background-color: transparent;" text="Sair" textFill="WHITE" />
+            <ImageView fx:id="imgPerfil" fitHeight="29.0" fitWidth="33.0" layoutX="329.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../user.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnPerfil" layoutX="330.0" layoutY="3.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="29.0" style="-fx-background-color: transparent;" text="Button" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
