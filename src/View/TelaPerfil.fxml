@@ -81,5 +81,6 @@
             </ImageView>
          </children>
       </Pane>
+      <JFXColorPicker fx:id="corTema" layoutX="210.0" layoutY="275.0" />
    </children>
 </AnchorPane>

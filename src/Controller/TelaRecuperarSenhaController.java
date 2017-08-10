@@ -23,6 +23,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -32,7 +33,7 @@ import javafx.stage.Stage;
  * @author Guilherme
  */
 public class TelaRecuperarSenhaController implements Initializable {
-
+        
     @FXML
     private TextField tfLogin;
 
@@ -53,9 +54,7 @@ public class TelaRecuperarSenhaController implements Initializable {
 
     @FXML
     private Button btnConfirmarResposta;
-
     
-
     @FXML
     private TextField tfResposta;
     
@@ -102,10 +101,8 @@ public class TelaRecuperarSenhaController implements Initializable {
             
             ObservableList<Conta> contas = contas = dao.select();
             
-            System.out.println("Textfield : "+tfResposta.getText()+" Teste :"+contas.get(contarecuperar).getResposta());
-            
             if(tfResposta.getText().equals(contas.get(contarecuperar).getResposta())){
-            
+                
             Conta conta = new Conta();
             
             conta.setLogin(contas.get(contarecuperar).getLogin());
@@ -125,6 +122,8 @@ public class TelaRecuperarSenhaController implements Initializable {
             
             conta.setSenha(senhacripto);
             conta.setChave(chave);
+            conta.setNome(contas.get(contarecuperar).getNome());
+            conta.setEmail(contas.get(contarecuperar).getEmail());
             dao.update(conta);
                 
                 Email email = new Email();
@@ -168,6 +167,7 @@ public class TelaRecuperarSenhaController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
         setaImagem();
         acaoDosBotoes();
         animaçaoBotoes();

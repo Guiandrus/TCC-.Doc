@@ -12,9 +12,13 @@ import Model.GerenciamentoImagens;
 import Model.ModelDAO.ContaDAO;
 import Model.TCC;
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXColorPicker;
 import com.jfoenix.controls.JFXTextField;
+import java.awt.Event;
+import static java.awt.SystemColor.text;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -22,6 +26,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 /**
@@ -31,6 +36,9 @@ import javafx.stage.Stage;
  */
 public class TelaPerfilController implements Initializable {
 
+    @FXML
+    private JFXColorPicker corTema;
+        
     @FXML
     private Button btnConfirmar;
 
@@ -78,7 +86,12 @@ public class TelaPerfilController implements Initializable {
     EncriptaDecriptaOTP criptografia = new EncriptaDecriptaOTP();
 
     public void acaoDosBotoes(){
-   
+  
+        corTema.setOnAction(event ->{
+        String cor = corTema.getValue().toString();
+        btnEditar.setStyle("-fx-background-color:"+cor.toString().replace("0x", "#"));
+        });
+        
         atualizaDados();
         btnEditar.setOnAction(event ->{
 

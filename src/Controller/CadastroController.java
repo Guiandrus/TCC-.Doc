@@ -12,6 +12,8 @@ import Model.ModelDAO.ContaDAO;
 import Model.TCC;
 import Model.Validacao;
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXComboBox;
+import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -39,10 +41,7 @@ public class CadastroController implements Initializable {
     private Button btnEscolheImagem;
 
     @FXML
-    private TextField tfSenha;
-
-    @FXML
-    private TextField tfLogin;
+    private JFXTextField tfSenha;
 
     @FXML
     private Button btnCadastrar;
@@ -51,7 +50,22 @@ public class CadastroController implements Initializable {
     private ImageView imageX;
 
     @FXML
-    private ComboBox<String> cbPergunta;
+    private JFXTextField tfEmail;
+
+    @FXML
+    private JFXTextField tfResposta;
+
+    @FXML
+    private ImageView imageVoltar;
+
+    @FXML
+    private JFXTextField tfLogin;
+
+    @FXML
+    private JFXButton btnVoltar;
+
+    @FXML
+    private JFXComboBox<String> cbPergunta;
 
     @FXML
     private ImageView imagemRosto;
@@ -60,19 +74,7 @@ public class CadastroController implements Initializable {
     private Button btnSair;
 
     @FXML
-    private TextField tfEmail;
-
-    @FXML
-    private TextField tfResposta;
-
-    @FXML
-    private TextField tfNome;
-        
-    @FXML
-    private ImageView imageVoltar;
-
-    @FXML
-    private JFXButton btnVoltar;
+    private JFXTextField tfNome;
 
     Validacao valida = new Validacao();
     
@@ -97,8 +99,6 @@ public class CadastroController implements Initializable {
             Image image = new Image("file:///" + caminho);
             imagemSelec = "file:///"+caminho;
             this.imagemRosto.setImage(image);
-            
-            
             
         });
         
